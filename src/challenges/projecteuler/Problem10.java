@@ -4,7 +4,7 @@ package challenges.projecteuler;
 public class Problem10 {
 
     public static void main(String[] args) {
-        System.out.println(getSumOfPrimes(2_000_000));
+        System.out.println(getSumOfPrimes(1_000_000));
     }
 
     public static long getSumOfPrimes(int toTheValue) {
