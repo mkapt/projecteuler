@@ -5,7 +5,7 @@ package challenges.projecteuler;
 public class Problem7 {
 
     public static void main(String[] args) {
-        System.out.println(getNthValue(10_000));
+        System.out.println(getNthValue(10_001));
     }
 
     private static int getNthValue(int value) {
@@ -25,13 +25,11 @@ public class Problem7 {
     }
 
     private static boolean isPrime(int number) {
-        for (int i = 2; i < number; i++) {
+        for (int i = 2; i <= Math.sqrt(number); i++) {
             if (number % i == 0) {
                 return false;
             }
         }
         return true;
     }
-
-
 }

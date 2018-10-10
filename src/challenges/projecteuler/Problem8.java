@@ -8,10 +8,10 @@ public class Problem8 {
         System.out.println(get(13, false));
     }
 
-    private static long get(int adjacentNumbers, boolean shouldUseARandomNumber) {
+    private static long get(int adjacentNumbers, boolean useARandomNumber) {
 
         String number;
-        if(shouldUseARandomNumber) {
+        if(useARandomNumber) {
             number = getRandomNumber(1000);
         } else {
             number = "73167176531330624919225119674426574742355349194934" +
@@ -55,7 +55,7 @@ public class Problem8 {
     private static String getRandomNumber(int digits) {
         String randomNumber = new String();
         for (int i = 0; i < digits; i++) {
-            randomNumber += ThreadLocalRandom.current().nextInt(0, 9 + 1);
+            randomNumber += ThreadLocalRandom.current().nextInt(0, digits + 1);
         }
 
         return randomNumber;
