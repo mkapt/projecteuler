@@ -7,7 +7,7 @@ import java.util.List;
 public class Problem3 {
 
     public static void main(String[] args) {
-        System.out.println(get(600851475143L));
+        System.out.println(get(600));
     }
 
     public static long get(long number) {
@@ -29,8 +29,8 @@ public class Problem3 {
         return list;
     }
 
-    public static boolean isPrime(long number) {
-        for (long i = 2; i*i < number; i++) {
+    private static boolean isPrime(long number) {
+        for (int i = 2; i <= Math.sqrt(number); i++) {
             if (number % i == 0) {
                 return false;
             }
